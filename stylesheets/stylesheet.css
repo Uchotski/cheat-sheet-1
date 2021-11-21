@@ -1,26 +1,81 @@
 /* UNIVERSAL STYLING */
 
+:root {
+    --coding-bg-color: #333;
+    --coding-font-color: #BBB;
+    --selector-font-color: rgb(245, 153, 153);
+    --property-font-color: #B2AC88;
+    --value-font-color: rgb(159, 185, 235);
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-size: 16px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
 }
 
 article {
+    padding: 20px;
+    width: 100%;
+}
+
+.css-example {
+    width: 95%;
+    background: var(--coding-bg-color);
+    color: var(--coding-font-color);
+    font-family: monospace;
     padding: 10px;
+    margin: 10px 2.5%;
+    border-radius: 10px;
 }
 
 /* TEXT STYLING AND SIZING */
 
 h1, h2, h3, h4, h5, h6 {
-    padding: 0.5em 0;
+    padding: 1em 0 0.5em 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 p {
     padding: 0.5em;
+}
+
+.coding {
+    background-color: var(--coding-bg-color);
+    color: var(--coding-font-color);
+    font-family: monospace;
+    border-radius: 5px;
+    padding: 0 2px;
+}
+
+.selector {
+    color: var(--selector-font-color);
+}
+
+.property {
+    color: var(--property-font-color);
+}
+
+.value {
+    color: var(--value-font-color);
+}
+
+/* Table Formatting */
+table {
+    width: 100%;
+}
+
+tbody tr td:first-of-type, tbody tr td:last-of-type {
+    text-align: center;
+}
+
+tbody li {
+    list-style-type: '\2014  ';
+    list-style-position: inside;
 }
