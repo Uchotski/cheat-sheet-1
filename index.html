@@ -1,58 +1,262 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cheat Sheet Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
 
-    <body>
-        <!-- Banner image/header -->
-        <header>
-            <h1>Cheat Sheet</h1>
-        </header>
+<head>
+    <title>Cheat Sheet Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-        <!-- Navbar -->
-        <nav>
+<body>
+    <!-- Banner image/header -->
+    <header>
+        <h1>Cheat Sheet</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main article -->
+    <article>
+
+        <!-- SYNTAX SECTION -->
+        <section id="syntax">
+            <h2>What is CSS?</h2>
+            <p>CSS, which stands for "Cascading Style Sheets", is a web development language used to style and position
+                the elements which have been coded onto a web page. In short, CSS governs the appearance of a website's
+                HTML.</p>
+
+            <h2>CSS Syntax:</h2>
+            <p>A CSS rule consists of a selector and a block of declarations. The declaration block is encased in curly
+                braces. It may be written over single or multiple lines. Multiple lines allow for increased readability
+                if a lot of declarations are being applied to the same selector.</p>
+
+            <h3>Single-line CSS:</h3>
+            <div class="css-example">h1 &lcub; color: #FFF; font-size: 100px; &rcub;</div>
+
+            <h3>Multi-line CSS:</h3>
+            <div class="css-example">
+                h1 &lcub;<br />
+                &nbsp;&nbsp;color: #FFF;<br />
+                &nbsp;&nbsp;font-size: 100px;<br />
+                &rcub;
+            </div>
+
+            <p>In the above examples, h1 is our selector. Color and font-size are our declarations. Declarations are
+                made up of property-value pairs.</p>
+        </section>
+
+        <!-- TEXT/FONTS SECTION -->
+        <section>
+            <h2>Common Declarations: Text and Font</h2>
+            <p>The following table outlines common property-value pairs which are used for styling text and fonts.</p>
+            <p>Common selectors for these declarations may be:
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+                <li>Heading tags: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; and &lt;h6&gt;.</li>
+                <li>Paragraphs: &lt;p&gt;.</li>
+                <li>Anchor (link) tags: &lt;a&gt;.</li>
+                <li>User-defined classes and ids.</li>
             </ul>
-        </nav>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4">Common Font and Text Declarations:</th>
+                    </tr>
+                    <tr>
+                        <th>Declaration:</th>
+                        <th>Values:</th>
+                        <th>Descrption:</th>
+                        <th>MDN Link:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Font family -->
+                    <tr>
+                        <td>font-family</td>
+                        <td>FONT STUFF</td>
+                        <td>Defines the type face which will be used by text within the HTML document.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">MDN</a></td>
+                    </tr>
 
-        <!-- Main article -->
-        <article>
+                    <!-- Font style -->
+                    <tr>
+                        <td>font-style</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>italic;</li>
+                                <li>oblique;</li>
+                                <li>oblique xdeg; <span class="nb">Replace x with a degree number.</span></li>
+                            </ul>
+                        </td>
+                        <td>Defines whether a font is normal, italic or oblique.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">MDN</a></td>
+                    </tr>
 
-            <!-- Section 1 -->
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                            <th>Column 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Item 1</td>
-                            <td>Item 2</td>
-                            <td>Item 3</td>
-                        </tr>
-                        <tr>
-                            <td>Item 1</td>
-                            <td>Item 2</td>
-                            <td>Item 3</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">The end!</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
-        </article>
-    </body>
+                    <!-- Font variant -->
+                    <tr>
+                        <td>font-variant</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>small-caps;</li>
+                                <li>slashed-zero;</li>
+                                <li>common-ligatures;</li>
+                                <li>no-common-ligatures;</li>
+                            </ul>
+                        </td>
+                        <td>Defines specific semantics about how a font will display to the user.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">MDN</a></td>
+                    </tr>
+
+                    <!-- Font weight -->
+                    <tr>
+                        <td>font-weight</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>lighter;</li>
+                                <li>bold;</li>
+                                <li>bolder;</li>
+                                <li>A number between 1 and 1000 (inclusive).</li>
+                            </ul>
+                        </td>
+                        <td>Defines how bold a font appears to the user.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">MDN</a></td>
+                    </tr>
+
+                    <!-- Letter spacing -->
+                    <tr>
+                        <td>letter-spacing</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>An em value.</li>
+                                <li>An rem value.</li>
+                                <li>A pixel value.</li>
+                            </ul>
+                        </td>
+                        <td>Defines the spacing between each letter in a font.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">MDN</a></td>
+                    </tr>
+
+                    <!-- Line height -->
+                    <tr>
+                        <td>line-height</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>A number with no units.</li>
+                                <li>An em value.</li>
+                                <li>An rem value.</li>
+                                <li>A percentage.</li>
+                                <li>A pixel value.</li>
+                            </ul>
+                        </td>
+                        <td>Defines the height of the box boundary surrounding each line of text.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">MDN</a></td>
+                    </tr>
+
+                    <!-- Text align -->
+                    <tr>
+                        <td>text-align</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>center;</li>
+                                <li>start;</li>
+                                <li>end;</li>
+                                <li>left;</li>
+                                <li>right;</li>
+                                <li>justify;</li>
+                            </ul>
+                        </td>
+                        <td>Defines how text will be positioned within its parent container.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">MDN</a></td>
+                    </tr>
+
+                    <!-- Text decoration -->
+                    <tr>
+                        <td>text-decoration</td>
+                        <td>
+                            <ul>
+                                <li>none;</li>
+                                <li>underline;</li>
+                                <li>overline;</li>
+                                <li>wavy underline;</li>
+                                <li>A colour.</li>
+                            </ul>
+                        </td>
+                        <td>A shorthand property which can accept multiple values for the same property (usually a type
+                            of decoration, e.g. underline, how it will display, e.g. dotted, and what colour it will
+                            be).</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">MDN</a></td>
+                    </tr>
+
+                    <!-- Text indent -->
+                    <tr>
+                        <td>text-indent</td>
+                        <td>
+                            <ul>
+                                <li>none;</li>
+                                <li>An em measurement.</li>
+                                <li>An rem measurement.</li>
+                                <li>A pixel measurement.</li>
+                                <li>A measurement in mm, cm or other units of length.</li>
+                            </ul>
+                        </td>
+                        <td>Defines the indentation of the first line of text in a paragraph. Can accept a negative
+                            value.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent">MDN</a></td>
+                    </tr>
+
+                    <!-- Text transform -->
+                    <tr>
+                        <td>text-transform</td>
+                        <td>
+                            <ul>
+                                <li>none;</li>
+                                <li>capitalize;</li>
+                                <li>uppercase;</li>
+                                <li>lowercase;</li>
+                                <li>full-width;</li>
+                            </ul>
+                        </td>
+                        <td>Defines how the capitalisation of a block of text should be displayed (e.g. all lower case,
+                            all in block capitals etc...).</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">MDN</a></td>
+                    </tr>
+
+                    <!-- Word spacing -->
+                    <tr>
+                        <td>word-spacing</td>
+                        <td>
+                            <ul>
+                                <li>normal;</li>
+                                <li>An em measurement.</li>
+                                <li>An rem measurement.</li>
+                                <li>A pixel measurement.</li>
+                                <li>A percentage.</li>
+                            </ul>
+                        </td>
+                        <td>Defines the amount of spacing between each word in a block of text.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">MDN</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Back to top</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </article>
+</body>
 </html>
