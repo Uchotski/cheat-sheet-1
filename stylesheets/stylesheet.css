@@ -7,6 +7,7 @@
     --selector-font-color: rgb(245, 153, 153);
     --property-font-color: #B2AC88;
     --value-font-color: rgb(159, 185, 235);
+    --declaration-font-color: rgb(91, 2, 99);
     --border-color: #FA0;
     --heading-bg-color: rgb(54, 26, 0);
 }
@@ -189,17 +190,68 @@ li {
 
 .selector {
     color: var(--selector-font-color);
+    position: relative;
 }
 
 .property {
     color: var(--property-font-color);
+    position: relative;
 }
 
 .value {
     color: var(--value-font-color);
+    position: relative;
 }
 
-/* Table Formatting */
+.declaration {
+    position: relative;
+    border-radius: 5px;
+}
+
+.selector:hover, .property:hover, .value:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.declaration:hover {
+    background: var(--declaration-font-color);
+    text-decoration-color: var(--declaration-font-color);
+}
+
+.selector:hover::after, .property:hover::after, .value:hover::after, .declaration:hover::after {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    z-index: 1;
+    background: #444;
+}
+
+.selector:hover::after {
+    content: "Selector";
+    border-left: 3px solid var(--selector-font-color);
+    top: calc(-100% - 20px);
+}
+
+.property:hover::after {
+    content: "Property";
+    border-left: 3px solid var(--property-font-color);
+}
+
+.value:hover::after {
+    content: "Value";
+    border-left: 3px solid var(--value-font-color);
+}
+
+.declaration:hover::after {
+    content: "Declaration";
+    top: calc(-100% - 20px);
+    border-left: 3px solid var(--declaration-font-color);
+}
+
+/* TABLE FORMATTING */
 table {
     width: 100%;
 }
@@ -214,6 +266,10 @@ th {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-left: solid 4px var(--border-color);
     border-radius: 5px;
+}
+
+tbody tr td {
+    padding: 5px 0;
 }
 
 tbody tr td:first-of-type, tbody tr td:last-of-type {
