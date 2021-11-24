@@ -343,13 +343,10 @@ tfoot td a {
     padding: 5px;
     text-decoration: underline;
     font-weight: bold;
-    font-style: italic;
     letter-spacing: 0.125em;
     color: #FFF;
 }
 
 tfoot td a:hover {
-    text-decoration: none;
-    font-style: normal;
     color: #FF6;
 }
