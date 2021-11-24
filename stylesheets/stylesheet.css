@@ -10,6 +10,7 @@
     --declaration-label-color: rgb(91, 2, 99);
     --declaration-font-color: rgb(213, 105, 223);
     --border-color: #FA0;
+    --example-border-color: rgb(141, 129, 104);
     --heading-bg-color: rgb(54, 26, 0);
 }
 
@@ -172,7 +173,7 @@ li {
     padding: 10px;
     margin: 10px 2.5%;
     border-radius: 10px;
-    border-left: solid 8px var(--border-color);
+    border-left: solid 8px var(--example-border-color);
     z-index: 0;
 }
 
