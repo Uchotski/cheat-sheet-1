@@ -251,7 +251,10 @@ li {
 /* TABLE FORMATTING */
 table {
     width: 100%;
+    padding: 5px;
 }
+
+/* Table head */
 
 thead {
     background: var(--coding-bg-color);
@@ -260,15 +263,93 @@ thead {
 
 th {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Open Sans', sans-serif;
     border-left: solid 4px var(--border-color);
+    border-radius: 5px;
+    font-size: 1.25em;
+    font-style: italic;
+    padding: 10px;
+}
+
+th h4 {
+    font-style: normal;
+    font-family: monospace;
+    text-decoration: underline;
+    letter-spacing: 0.125em;
+    font-size: 1.25em;
+}
+
+/* Table body */
+
+tbody tr td {
+    padding: 5px 2px;
     border-radius: 5px;
 }
 
-tbody tr td {
-    padding: 5px 0;
+tbody tr {
+    background: #FED;
+}
+
+tbody tr:nth-of-type(even) {
+    background: rgb(255, 238, 205);
+}
+
+tbody tr:hover {
+    background: rgb(255, 182, 37);
+    color: #FFF;
+}
+
+tbody tr:hover td:first-of-type {
+    background: #444;
 }
 
 tbody tr td:first-of-type, tbody tr td:last-of-type {
     text-align: center;
+}
+
+/* Table body links */
+
+tbody td a {
+    color: #555;
+    font-weight: bold;
+}
+
+tbody tr:hover td a {
+    color: #FFF;
+}
+
+tbody tr td a:hover {
+    color: #FF6;
+}
+
+tbody tr td a:active {
+    color: #FFD;
+}
+
+/* Table footer */
+
+tfoot {
+    background: var(--border-color);
+    color: #FFF;
+    text-align: center;
+}
+
+tfoot td {
+    border-radius: 5px;
+}
+
+tfoot td a {
+    display: block;
+    padding: 5px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.125em;
+    color: #FFF;
+}
+
+tfoot td a:hover {
+    text-decoration: none;
+    font-style: normal;
+    color: #FF6;
 }
