@@ -71,6 +71,22 @@ hr {
     border-top: 1px dashed var(--border-color);
 }
 
+footer {
+    width: 100%;
+    position: relative;
+    background: url('../images/film_texture.jpg');
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(45, 45, 45, 0.7), rgba(45, 45, 45, 0.9));
+}
+
 /* NAVBAR STYLING */
 
 nav {
@@ -151,6 +167,27 @@ h3 {
 
 p {
     padding: 20px;
+}
+
+footer p {
+    position: relative;
+    font-family: monospace;
+    color: var(--coding-font-color);
+    text-align: center;
+    padding: 5px;
+    font-size: 0.75em;
+}
+
+footer a {
+    color: var(--coding-font-color);
+}
+
+footer a:hover {
+    color: #DDD;
+}
+
+footer a:active {
+    color: #FFF;
 }
 
 ul {
