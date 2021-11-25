@@ -93,13 +93,15 @@ nav {
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     font-family: monospace;
+    box-shadow: 0 10px 15px rgba(45, 45, 45, 0.3);
 }
 
 nav ul {
     padding: 0;
     margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -108,12 +110,31 @@ nav ul {
 }
 
 nav ul li {
+    font-size: 1.1em;
     list-style-type: none;
+    flex-basis: 25%;
+    flex-shrink: 4;
+    text-align: center;
 }
 
 nav a {
     display: block;
     padding: 20px 0;
+    background-color: var(--border-color);
+    color: var(--coding-bg-color);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    color: rgb(45, 45, 45);
+    background-color: rgb(240, 188, 86);
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #DDD;
+    background-color: #FFD;
 }
 
 /* TEXT STYLING AND SIZING */
@@ -245,10 +266,12 @@ li {
 .selector:hover, .property:hover, .value:hover {
     text-decoration: underline;
     cursor: pointer;
+    opacity: 1;
 }
 
 .declaration:hover {
     background: var(--declaration-label-color);
+    opacity: 1;
 }
 
 .selector:hover::after, .property:hover::after, .value:hover::after, .declaration:hover::after {
@@ -260,6 +283,7 @@ li {
     border-radius: 5px;
     z-index: 1;
     background: #444;
+    opacity: 0.92;
 }
 
 .selector:hover::after {
