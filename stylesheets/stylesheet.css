@@ -224,6 +224,15 @@ li {
 
 /* Special Blocks */
 
+.nb {
+    font-variant: small-caps;
+    font-style: italic;
+}
+
+.nb::before {
+    content: "N.B: "
+}
+
 .css-example {
     position: relative;
     width: 95%;
@@ -362,7 +371,7 @@ tbody tr:hover {
     color: #FFF;
 }
 
-tbody tr:hover td:first-of-type {
+tbody tr:hover td:first-of-type, tbody tr:hover span.coding {
     background: #444;
 }
 
