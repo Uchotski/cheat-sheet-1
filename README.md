@@ -22,3 +22,9 @@ In this project, you'll be building your own reference cheat sheet to help you b
 - Utilise a custom colour scheme.
 - Use custom styles for any code such as HTML tags or CSS properties or values.
   - Represent code using a monospace font, and a different background colour.
+
+
+## Project Expansion Goals:
+
+- Add CSS Media Queries. (Done!)
+- Add Javascript tabs to flip between sections of HTML.
