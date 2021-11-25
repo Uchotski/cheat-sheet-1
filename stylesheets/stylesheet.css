@@ -57,6 +57,7 @@ article {
     padding: 20px;
     width: 50%;
     margin: auto;
+    min-width: 350px;
 }
 
 .subsection {
@@ -107,6 +108,7 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: center;
     background: var(--border-color);
+    min-width: 350px;
 }
 
 nav ul li {
@@ -410,4 +412,41 @@ tfoot td a {
 
 tfoot td a:hover {
     color: #FF6;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 650px) and (max-width: 1250px) {
+    article {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    thead tr th:last-of-type:not(:first-of-type) {
+        display: none;
+    }
+
+    tbody tr td:last-of-type {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 649px) {
+    article {
+        width: 95%;
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    article {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 0.8em;
+    }
 }
